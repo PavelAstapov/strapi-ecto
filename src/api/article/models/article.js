@@ -11,7 +11,7 @@ module.exports = {
     async beforeCreate(data) {
       const { article } = data;
       if (article && article?.length > 0) {
-        data.readingTime = readingTime(content)?.text || null;
+        data.readingTime = readingTime(article)?.text || null;
       }
     },
     async beforeUpdate(params, data) {
