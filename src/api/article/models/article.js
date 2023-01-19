@@ -1,9 +1,11 @@
 "use strict";
 const readingTime = require("reading-time");
+
 /**
  * Read the documentation (https://docs.strapi.io/developer-docs/latest/development/backend-customization.html#lifecycle-hooks)
  * to customize this model
  */
+
 module.exports = {
   lifecycles: {
     async beforeCreate(data) {
