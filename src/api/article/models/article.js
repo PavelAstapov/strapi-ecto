@@ -9,15 +9,15 @@ const readingTime = require("reading-time");
 module.exports = {
   lifecycles: {
     async beforeCreate(data) {
-      const { content } = data;
-      if (content && content?.length > 0) {
+      const { article } = data;
+      if (article && article?.length > 0) {
         data.readingTime = readingTime(content)?.text || null;
       }
     },
     async beforeUpdate(params, data) {
       const { content } = data;
-      if (content && content?.length > 0) {
-        data.readingTime = readingTime(content)?.text || null;
+      if (article && article?.length > 0) {
+        data.readingTime = readingTime(article)?.text || null;
       }
     },
   },
