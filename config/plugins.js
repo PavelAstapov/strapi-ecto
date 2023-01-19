@@ -4,14 +4,15 @@ module.exports = ({ env }) => ({
     },
     ckeditor: true,
     graphql: {
-    config: {
-      endpoint: '/graphql',
-      shadowCRUD: true,
-      playgroundAlways: false,
-      depthLimit: 7,
-      amountLimit: 100,
-      apolloServer: {
-      tracing: false,
+      config: {
+        endpoint: '/graphql',
+        shadowCRUD: true,
+        playgroundAlways: false,
+        depthLimit: 7,
+        amountLimit: 100,
+        apolloServer: {
+          tracing: false,
+        },
       },
     },
     menus: {
@@ -28,5 +29,4 @@ module.exports = ({ env }) => ({
         localization: true
       }
     },
-  },
 })
